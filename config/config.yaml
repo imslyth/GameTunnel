@@ -1,0 +1,67 @@
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8080
+  max_connections: 1000
+  buffer_size: 65536
+  
+# Client Configuration  
+client:
+  auto_connect: true
+  retry_attempts: 3
+  retry_delay: 5
+  heartbeat_interval: 30
+  
+# Tunnel Settings
+tunnel:
+  encryption: true
+  compression: true
+  mtu: 1400
+  keepalive: 60
+  
+# Server List  
+servers:
+  - name: "Local Server"
+    host: "127.0.0.1"
+    port: 8080
+    region: "local"
+    location: "Localhost"
+    
+  - name: "Local Server Alt"
+    host: "localhost" 
+    port: 8081
+    region: "local-alt"
+    location: "Localhost Alt"
+
+# Game Profiles
+games:
+  - name: "Counter-Strike 2"
+    executable: "cs2.exe"
+    ports: [27015, 27016, 27017, 27018, 27019]
+    protocol: "udp"
+    optimization: "fps"
+    
+  - name: "Valorant"
+    executable: "valorant.exe"
+    ports: [7777, 7778, 7779]
+    protocol: "udp"
+    optimization: "competitive"
+    
+  - name: "League of Legends"
+    executable: "league of legends.exe"
+    ports: [5000, 5001, 5002, 5003, 5004, 5005, 5006, 5007, 5008, 5009]
+    protocol: "udp"
+    optimization: "moba"
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/gametunnel.log"
+  max_size: "10MB"
+  backup_count: 5
+
+# Dashboard
+dashboard:
+  host: "127.0.0.1"
+  port: 5000
+  debug: false
