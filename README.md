@@ -84,6 +84,4 @@ Game Client ←→ Tunnel Client ←→ Tunnel Server ←→ Game Server
 - Apex Legends
 - And many more...
 
-## License
 
-MIT License - See LICENSE file for details
